@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Employee;
+use App\Models\State;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,4 +14,12 @@ class Country extends Model
         'country_code',
         'name',
     ];
+    public function employees()
+    {
+        return $this->hasMany(Employee::class);
+    }
+    public function states()
+    {
+        return $this->hasMany(State::class);
+    }
 }
