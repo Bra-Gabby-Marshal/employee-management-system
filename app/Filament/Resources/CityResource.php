@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CityResource\Pages;
 use App\Filament\Resources\CityResource\RelationManagers;
+use App\Filament\Resources\StateResource\RelationManagers\EmployeesRelationManager;
 use App\Models\City;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -72,6 +73,7 @@ class CityResource extends Resource
     {
         return [
             //
+            EmployeesRelationManager::class,
         ];
     }
 
