@@ -51,8 +51,7 @@ class EmployeeResource extends Resource
                         }
                         return $country->states->pluck('name', 'id');
                     })
-                    ->reactive()
-                    ->afterStateUpdated(fn(callable $set) => $set('city_id', null)),
+                    ->reactive(),
                 Forms\Components\Select::make('city_id')
                     ->label('City')
                     ->options(function (callable $get) {
