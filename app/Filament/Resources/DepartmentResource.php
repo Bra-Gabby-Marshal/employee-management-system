@@ -70,7 +70,6 @@ class DepartmentResource extends Resource
             EmployeesRelationManager::class,
         ];
     }
-
     public static function getPages(): array
     {
         return [
